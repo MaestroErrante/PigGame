@@ -84,5 +84,9 @@ btnNew.addEventListener('click', function () {
   console.log('buttonWorks');
   score0El.textContent = 0;
   score1El.textContent = 0;
+  current0El.textContent = 0;
+  current1El.textContent = 0;
   diceEl.classList.add('hidden');
+  currentScore = 0;
+  scores = [0, 0];
 });
