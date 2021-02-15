@@ -89,4 +89,7 @@ btnNew.addEventListener('click', function () {
   diceEl.classList.add('hidden');
   currentScore = 0;
   scores = [0, 0];
+  if (activePlayer === 1) {
+    switchPlayer();
+  }
 });
