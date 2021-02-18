@@ -166,6 +166,17 @@ main {
   color: #c7365f;
 }
 
+.close-window {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 5rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
 .hidden {
   display: none;
 }
