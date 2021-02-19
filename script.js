@@ -11,6 +11,9 @@ const diceEl = document.querySelector('.dice');
 const btnNew = document.querySelector('.btn--new');
 const btnRoll = document.querySelector('.btn--roll');
 const btnHold = document.querySelector('.btn--hold');
+const winnerWindow = document.querySelector('.winner');
+const overlay = document.querySelector('.overlay');
+const btnCloseWindow = document.querySelector('.close-window');
 
 //Starting Conditions
 score0El.textContent = 0;
@@ -22,6 +25,18 @@ let currentScore = 0;
 let activePlayer = 0;
 let playing = true;
 
+// Functions to open and close winners window
+const openWindow = function () {
+  winnerWindow.classList.remove('hidden');
+  overlay.classList.remove('hidden');
+};
+
+const closeWindow = function () {
+  winnerWindow.classList.add('hidden');
+  overlay.classList.add('hidden');
+};
+
+// Function to switch player
 const switchPlayer = function () {
   document.getElementById(`current--${activePlayer}`).textContent = 0;
   currentScore = 0;
