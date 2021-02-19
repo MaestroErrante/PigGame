@@ -88,6 +88,9 @@ btnHold.addEventListener('click', function () {
       document
         .querySelector(`.player--${activePlayer}`)
         .classList.remove('player--active');
+      // Close winners window
+      btnCloseWindow.addEventListener('click', closeWindow);
+      overlay.addEventListener('click', closeModal);
     } else {
       // Switch to the next player
       switchPlayer();
