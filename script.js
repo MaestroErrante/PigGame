@@ -77,7 +77,7 @@ btnHold.addEventListener('click', function () {
     document.getElementById(`score--${activePlayer}`).textContent =
       scores[activePlayer];
     // 2. Check if player's score is >= 100
-    if (scores[activePlayer] >= 100) {
+    if (scores[activePlayer] >= 10) {
       // finish Game
       openWindow();
       playing = false;
@@ -90,7 +90,13 @@ btnHold.addEventListener('click', function () {
         .classList.remove('player--active');
       // Close winners window
       btnCloseWindow.addEventListener('click', closeWindow);
-      overlay.addEventListener('click', closeModal);
+      overlay.addEventListener('click', closeWindow);
+      document.addEventListener('keydown', function (e) {
+        console.log(e.key);
+        if (e.key === 'Escape' && !winnerWindow.classList.contains('hidden')) {
+          closeWindow();
+        }
+      });
     } else {
       // Switch to the next player
       switchPlayer();
